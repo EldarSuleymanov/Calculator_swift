@@ -93,7 +93,7 @@ class ViewController: UIViewController {
                     divideButton.backgroundColor = UIColor.lightGray
                     if sender.tag == 11{
                         divideButton.backgroundColor = UIColor.darkGray
-                        if isSign && !isResult && currentScreenDigit == 0{ // |
+                        if isSign && !isResult { // |
                             screen.text = String(GetResult(firstnum: firstNum, secondnum: currentScreenDigit, operation: operation))
                         } else{
                             isSign = true
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
                     }
                     else if sender.tag == 12{ // *
                         multiplyButton.backgroundColor = UIColor.darkGray
-                        if isSign && !isResult && currentScreenDigit == 0{
+                        if isSign && !isResult{
                             screen.text = String(GetResult(firstnum: firstNum, secondnum: currentScreenDigit, operation: operation))
                         } else{
                             isSign = true
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
                     }
                     else if sender.tag == 13{ // -
                         minusButton.backgroundColor = UIColor.darkGray
-                        if isSign && !isResult && currentScreenDigit == 0{
+                        if isSign && !isResult {
                             screen.text = String(GetResult(firstnum: firstNum, secondnum: currentScreenDigit, operation: operation))
                         } else{
                             isSign = true
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
                     }
                     else if sender.tag == 14{ // +
                         Plusbutton.backgroundColor = UIColor.darkGray
-                        if isSign && !isResult && currentScreenDigit == 0 {
+                        if isSign && !isResult  {
                         screen.text = String(GetResult(firstnum: firstNum, secondnum: currentScreenDigit, operation: operation))
                         } else{
                             isSign = true
@@ -152,16 +152,16 @@ class ViewController: UIViewController {
                     CancelButton.backgroundColor = UIColor.systemGreen
                     DedidedByZero = true
                     } else if !isResult{
-                    if operation == 11 && currentScreenDigit == 0 {
+                    if operation == 11 {
                         screen.text = String(firstNum / currentScreenDigit)
                     }
-                    else if operation == 12 && currentScreenDigit == 0 {
+                    else if operation == 12  {
                         screen.text = String(firstNum * currentScreenDigit)
                     }
-                    else if operation == 13 && currentScreenDigit == 0 {
+                    else if operation == 13 {
                         screen.text = String(firstNum - currentScreenDigit)
                     }
-                    else if operation == 14 && currentScreenDigit == 0 {
+                    else if operation == 14 {
                         screen.text = String(GetResult(firstnum: firstNum, secondnum: currentScreenDigit, operation: operation))
                     }
                         pointPressed = true
